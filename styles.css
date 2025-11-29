@@ -1,0 +1,264 @@
+/* Reset simples */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #1f2933;
+  background: #050816;
+  position: relative;
+}
+
+/* Fundo com gradiente suave */
+.background-gradient {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(56, 189, 248, 0.25), transparent 55%),
+    radial-gradient(circle at 100% 100%, rgba(94, 234, 212, 0.2), transparent 55%),
+    radial-gradient(circle at 30% 100%, rgba(251, 191, 36, 0.18), transparent 55%);
+  opacity: 0.9;
+  z-index: -1;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 40px auto 32px;
+  padding: 0 16px;
+}
+
+/* Cards principais */
+
+.header-card,
+.table-card,
+.controls-card {
+  background: rgba(255, 255, 255, 0.93);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.28);
+}
+
+.header-card {
+  padding: 24px 24px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.header-card h1 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: #111827;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin-top: 4px;
+}
+
+/* Pill com período */
+.info-pill {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #0ea5e9, #22c55e);
+  color: #f9fafb;
+  font-size: 0.8rem;
+  min-width: 130px;
+}
+
+.pill-label {
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+}
+
+.pill-value {
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+/* Card de controles */
+
+.controls-card {
+  margin-top: 16px;
+  padding: 14px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.hint {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.controls-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #374151;
+}
+
+.controls-right select {
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  outline: none;
+  background: #f9fafb;
+  font-size: 0.85rem;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.controls-right select:focus {
+  border-color: #0ea5e9;
+  box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.25);
+  background: #ffffff;
+}
+
+/* Tabela */
+
+.table-card {
+  margin-top: 18px;
+  padding: 18px 18px 10px;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Estilo da barra de rolagem (desktop) */
+.table-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+.table-wrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+.table-wrapper::-webkit-scrollbar-thumb {
+  background: #cbd5f5;
+  border-radius: 999px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+thead {
+  background: linear-gradient(90deg, #0f766e, #0ea5e9);
+  color: #f9fafb;
+}
+
+thead th {
+  padding: 10px 8px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-right: 1px solid rgba(15, 23, 42, 0.15);
+}
+thead th:last-child {
+  border-right: none;
+}
+
+tbody td,
+tfoot td {
+  padding: 8px 8px;
+  font-size: 0.85rem;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+tbody tr:nth-child(odd) {
+  background: #f9fafb;
+}
+
+tbody tr:nth-child(even) {
+  background: #eef2ff;
+}
+
+/* Quando passar o mouse */
+tbody tr:hover {
+  background: #dbeafe;
+}
+
+/* Destaque ao clicar / filtrar */
+tbody tr.highlight {
+  background: #facc15 !important;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+/* Colunas iniciais alinhadas à esquerda */
+tbody td:nth-child(1),
+tbody td:nth-child(2),
+tbody td:nth-child(3),
+tbody td:nth-child(4),
+tfoot td.media-label {
+  text-align: left;
+}
+
+/* Linha de média */
+.media-row {
+  background: linear-gradient(90deg, #111827, #1f2937);
+  color: #f9fafb;
+  font-weight: 500;
+}
+
+.media-label {
+  padding-left: 12px;
+  font-size: 0.9rem;
+}
+
+/* Rodapé */
+
+.footer {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 0.78rem;
+  color: #e5e7eb;
+  opacity: 0.9;
+}
+
+/* Responsivo */
+
+@media (max-width: 768px) {
+  .header-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .info-pill {
+    align-self: stretch;
+    align-items: center;
+  }
+
+  .controls-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hint {
+    margin-bottom: 4px;
+  }
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Histórico Escolar - Samuel Sousa Azevedo</title>
+
+  <!-- Fonte Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="background-gradient"></div>
+
+  <main class="container">
+    <header class="header-card">
+      <div>
+        <h1>Histórico Escolar</h1>
+        <p class="subtitle">Samuel Sousa Azevedo</p>
+      </div>
+
+      <div class="info-pill">
+        <span class="pill-label">Período</span>
+        <span class="pill-value">2021 &ndash; 2032</span>
+      </div>
+    </header>
+
+    <section class="controls-card">
+      <div class="controls-left">
+        <p class="hint">
+          Clique no ano para destacá-lo. A linha final mostra a
+          <strong>média por disciplina</strong> ao longo dos anos.
+        </p>
+      </div>
+      <div class="controls-right">
+        <label for="yearFilter">Destacar ano:</label>
+        <select id="yearFilter">
+          <option value="">Todos</option>
+          <option value="2021">2021 &mdash; 1º ano</option>
+          <option value="2022">2022 &mdash; 2º ano</option>
+          <option value="2023">2023 &mdash; 3º ano</option>
+          <option value="2024">2024 &mdash; 4º ano</option>
+          <option value="2025">2025 &mdash; 5º ano</option>
+          <!-- Anos seguintes podem ser acrescentados depois -->
+        </select>
+      </div>
+    </section>
+
+    <section class="table-card">
+      <div class="table-wrapper">
+        <table id="historicoTable">
+          <thead>
+            <tr>
+              <th rowspan="2">Ano</th>
+              <th rowspan="2">Série</th>
+              <th rowspan="2">Idade<br>inicial</th>
+              <th rowspan="2">Idade<br>final</th>
+              <th colspan="10">Médias por disciplina / série</th>
+            </tr>
+            <tr>
+              <th>Artes</th>
+              <th>Ciências</th>
+              <th>Ed. Física</th>
+              <th>Filosofia</th>
+              <th>Geografia</th>
+              <th>História</th>
+              <th>Inglês</th>
+              <th>Matemática</th>
+              <th>Português</th>
+              <th>Geral</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-year="2021">
+              <td>2021</td>
+              <td>1º</td>
+              <td>6</td>
+              <td>7</td>
+              <td>9,8</td>
+              <td>9,2</td>
+              <td>9,5</td>
+              <td>9,5</td>
+              <td>9,2</td>
+              <td>9,2</td>
+              <td>10</td>
+              <td>9,7</td>
+              <td>9,2</td>
+              <td>9,5</td>
+            </tr>
+            <tr data-year="2022">
+              <td>2022</td>
+              <td>2º</td>
+              <td>7</td>
+              <td>8</td>
+              <td>9,0</td>
+              <td>9,9</td>
+              <td>10</td>
+              <td>10</td>
+              <td>9,4</td>
+              <td>9,4</td>
+              <td>9,9</td>
+              <td>9,2</td>
+              <td>9,8</td>
+              <td>9,6</td>
+            </tr>
+            <tr data-year="2023">
+              <td>2023</td>
+              <td>3º</td>
+              <td>8</td>
+              <td>9</td>
+              <td>10</td>
+              <td>9,8</td>
+              <td>9,5</td>
+              <td>9,5</td>
+              <td>9,7</td>
+              <td>9,7</td>
+              <td>10</td>
+              <td>9,4</td>
+              <td>9,5</td>
+              <td>9,7</td>
+            </tr>
+            <tr data-year="2024">
+              <td>2024</td>
+              <td>4º</td>
+              <td>9</td>
+              <td>10</td>
+              <td>9,8</td>
+              <td>9,4</td>
+              <td>9,7</td>
+              <td>9,5</td>
+              <td>9,3</td>
+              <td>9,4</td>
+              <td>9,1</td>
+              <td>9,3</td>
+              <td>9,8</td>
+              <td>9,5</td>
+            </tr>
+            <tr data-year="2025">
+              <td>2025</td>
+              <td>5º</td>
+              <td>10</td>
+              <td>11</td>
+              <td>9,8</td>
+              <td>9,6</td>
+              <td>9,8</td>
+              <td>9,3</td>
+              <td>9,0</td>
+              <td>9,6</td>
+              <td>9,2</td>
+              <td>9,4</td>
+              <td>8,4</td>
+              <td>9,3</td>
+            </tr>
+
+            <!-- Linhas futuras (2026–2032) podem ser adicionadas depois -->
+          </tbody>
+          <tfoot>
+            <tr class="media-row">
+              <td colspan="4" class="media-label">Média por disciplina</td>
+              <td>9,7</td>
+              <td>9,6</td>
+              <td>9,7</td>
+              <td>9,6</td>
+              <td>9,4</td>
+              <td>9,5</td>
+              <td>9,8</td>
+              <td>9,4</td>
+              <td>9,2</td>
+              <td>9,5</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Atualizado em <span id="currentYear"></span>. Desenvolvido com carinho para registro escolar familiar.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
