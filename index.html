@@ -44,7 +44,7 @@
 
     <section class="stats">
       <div class="stat-card">
-        <div style="font-size: 0.9em; color: #6c7 57d;">Média Geral</div>
+        <div style="font-size: 0.9em; color: #6c757d;">Média Geral</div>
         <div style="font-size: 2em; font-weight: 700;">9,5</div>
         <div style="font-size: 0.85em; color: #6c757d;">Acumulada (1º ao 5º)</div>
       </div>
@@ -66,11 +66,11 @@
     </section>
 
     <nav class="nav-tabs">
-      <button class="nav-tab active" onclick="showTab('avaliacoes')">📝 Avaliações</button>
-      <button class="nav-tab" onclick="showTab('notas')">📊 Notas</button>
-      <button class="nav-tab" onclick="showTab('evolucao')">📈 Evolução</button>
-      <button class="nav-tab" onclick="showTab('eventos')">📋 Eventos</button>
-      <button class="nav-tab" onclick="showTab('trimestres')">📑 Trimestres</button>
+      <button class="nav-tab active" onclick="showTab('avaliacoes', this)">📝 Avaliações</button>
+      <button class="nav-tab" onclick="showTab('notas', this)">📊 Notas</button>
+      <button class="nav-tab" onclick="showTab('evolucao', this)">📈 Evolução</button>
+      <button class="nav-tab" onclick="showTab('eventos', this)">📋 Eventos</button>
+      <button class="nav-tab" onclick="showTab('trimestres', this)">📑 Trimestres</button>
     </nav>
 
     <section id="avaliacoes" class="tab-content active">
@@ -79,9 +79,12 @@
         
         <div class="trimestre-info">
           <strong>ℹ️ Informações Importantes:</strong><br>
-          • Avaliação Diagnóstica SAS: 09 a 13 de fevereiro (online, sem pontuação)<br>
-          • Horário: 7h50 às 11h30 | Liberação após 2h mínimo<br>
-          • Celulares desligados e mochilas no início da sala
+          • Avaliação Diagnóstica SAS: 09 a 13 de fevereiro (online, sem pontuação na média trimestral — aguardar orientações)<br>
+          • 13h às 13h30: organização da sala, celulares desligados e mochilas no início da sala<br>
+          • Intervalo: 13h30 às 13h50<br>
+          • Horário das Avaliações: 13h50 às 17h30<br>
+          • Nas avaliações globais, liberação após tempo mínimo de 2 horas<br>
+          • Após as avaliações os alunos serão liberados
         </div>
 
         <div class="avaliacao-card">
@@ -89,9 +92,9 @@
           <div style="margin-top: 12px; font-size: 0.9em;">
             <strong>Formato:</strong> 10 questões (5 discursivas + 5 objetivas)<br><br>
             <strong>Terça, 17/03:</strong> Português (cap. 1, 2 e 3)<br>
-            <strong>Quarta, 18/03:</strong> Matemática + Lógica (cap. 1, 2, 3 + 1)<br>
-            <strong>Quinta, 19/03:</strong> Ciências + Geografia (cap. 1, 2 e 3)<br>
-            <strong>Sexta, 20/03:</strong> História + Inglês (cap. 1, 2 e 3)
+            <strong>Quarta, 18/03:</strong> Matemática (cap. 1, 2 e 3) + Lógica (cap. 1)<br>
+            <strong>Quinta, 19/03:</strong> Ciências e Geografia (cap. 1, 2 e 3)<br>
+            <strong>Sexta, 20/03:</strong> História e Inglês (cap. 1, 2 e 3)
           </div>
         </div>
 
@@ -107,37 +110,40 @@
           <strong style="color: #0d6efd; font-size: 1.1em;">📚 Avaliação Global (10,0 pontos)</strong>
           <div style="margin-top: 12px; font-size: 0.9em;">
             <strong>Formato:</strong> 15 questões (12 discursivas + 3 objetivas)<br><br>
-            <strong>Segunda, 04/05:</strong> Português (4, 5, 6) + Ed. Física<br>
-            <strong>Terça, 05/05:</strong> Matemática (4, 5, 6) + Lógica (2 e 3)<br>
-            <strong>Quarta, 06/05:</strong> História + Inglês (cap. 4, 5 e 6)<br>
-            <strong>Quinta, 07/05:</strong> Ciências + Filosofia (cap. 4, 5 e 6)<br>
-            <strong>Sexta, 08/05:</strong> Artes + Geografia (cap. 4, 5 e 6)
+            <strong>Segunda, 04/05:</strong> Português (cap. 4, 5 e 6) + Ed. Física (Bocha e Parkour)<br>
+            <strong>Terça, 05/05:</strong> Matemática (cap. 4, 5 e 6) + Lógica (cap. 2 e 3)<br>
+            <strong>Quarta, 06/05:</strong> História e Inglês (cap. 4, 5 e 6)<br>
+            <strong>Quinta, 07/05:</strong> Ciências e Filosofia (cap. 4, 5 e 6)<br>
+            <strong>Sexta, 08/05:</strong> Artes e Geografia (cap. 4, 5 e 6)
           </div>
         </div>
 
         <div class="avaliacao-card">
-          <strong style="color: #0d6efd; font-size: 1.1em;">🔄 Reposição (10,0 pontos)</strong>
+          <strong style="color: #0d6efd; font-size: 1.1em;">🔄 Reposição de Avaliações (10,0 pontos)</strong>
           <div style="margin-top: 12px; font-size: 0.9em;">
             <strong>Abrange:</strong> Todos os capítulos (1 ao 6)<br><br>
-            <strong>Segunda, 11/05:</strong> Matemática + Lógica + Inglês<br>
-            <strong>Terça, 12/05:</strong> Português + Arte + Ed. Física<br>
-            <strong>Quarta, 13/05:</strong> História + Filosofia<br>
-            <strong>Quinta, 14/05:</strong> Geografia + Ciências
+            <strong>Segunda, 11/05:</strong> Matemática, Lógica e Inglês<br>
+            <strong>Terça, 12/05:</strong> Português, Arte e Ed. Física<br>
+            <strong>Quarta, 13/05:</strong> História e Filosofia<br>
+            <strong>Quinta, 14/05:</strong> Geografia e Ciências
           </div>
         </div>
 
         <div style="background: #e7f3ff; border: 2px solid #0d6efd; padding: 20px; border-radius: 12px; margin-top: 24px;">
-          <strong style="color: #0d6efd; font-size: 1.2em;">🧮 Composição de Notas</strong>
+          <strong style="color: #0d6efd; font-size: 1.2em;">🧮 Composição de Notas — 1º Trimestre</strong>
           <div style="margin-top: 16px;">
-            <strong>NOTA 01:</strong> AV1 (7,0) + AV2 (3,0)<br>
-            <strong>NOTA 02:</strong> AV3 (5,0) + AV4 (5,0)<br>
-            <strong>NOTA 03:</strong> AV5 (10,0)
+            <strong>NOTA 01-AV1:</strong> Avaliação Parcial (7,0 pontos)<br>
+            <strong>NOTA 01-AV2:</strong> Atividades Direcionadas (3,0 pontos)<br>
+            <strong>NOTA 02-AV3:</strong> Simuladinho (5,0 pontos)<br>
+            <strong>NOTA 02-AV4:</strong> Estação Científica (5,0 pontos)<br>
+            <strong>NOTA 03-AV5:</strong> Avaliação Global (10,0 pontos)
           </div>
           <div style="background: white; padding: 16px; border-radius: 8px; text-align: center; font-weight: 700; font-size: 1.1em; margin-top: 16px;">
-            Média = (NOTA 01 + NOTA 02 + NOTA 03) ÷ 3
+            Média = (NOTA 01 + NOTA 02 + NOTA 03) ÷ 3<br>
+            <span style="font-size: 0.85em; font-weight: 500; color: #6c757d;">NOTA 01 = AV1+AV2 &nbsp;|&nbsp; NOTA 02 = AV3+AV4 &nbsp;|&nbsp; NOTA 03 = AV5</span>
           </div>
           <div style="text-align: center; margin-top: 12px; color: #0d6efd; font-weight: 600;">
-            📋 Entrega do Resultado: 23 de maio de 2026
+            📋 Entrega do Resultado 1º Trimestre: 23 de maio de 2026
           </div>
         </div>
       </div>
@@ -277,11 +283,11 @@
       { date: '2026-12-16', name: 'Resultado Final' }
     ];
 
-    function showTab(tabName) {
+    function showTab(tabName, btn) {
       document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
       document.querySelectorAll('.nav-tab').forEach(b => b.classList.remove('active'));
       document.getElementById(tabName).classList.add('active');
-      event.target.classList.add('active');
+      btn.classList.add('active');
     }
 
     function applyGradeColors() {
