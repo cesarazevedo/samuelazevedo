@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -32,7 +31,27 @@
     .avaliacao-card { background: #f8f9fa; border: 2px solid #dee2e6; border-radius: 12px; padding: 20px; margin-bottom: 16px; }
     .event-card { background: #f8f9fa; padding: 16px; margin-bottom: 12px; border-left: 4px solid #0d6efd; border-radius: 0 8px 8px 0; display: flex; justify-content: space-between; align-items: center; }
     .chart-container { height: 350px; margin-top: 20px; }
-    @media (max-width: 768px) { .stats { grid-template-columns: 1fr 1fr; } .nav-tab { min-width: 100px; padding: 10px 16px; font-size: 0.9em; } }
+    
+    /* Novos estilos para diagnóstico */
+    .diagnostico-section { background: linear-gradient(135deg, #198754 0%, #20c997 100%); border-radius: 12px; padding: 30px; color: white; margin-bottom: 24px; }
+    .diagnostico-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin-top: 20px; }
+    .diagnostico-materia { background: white; border-radius: 12px; padding: 20px; color: #212529; }
+    .materia-nota { font-size: 2.5em; font-weight: 700; }
+    .materia-nome { font-size: 1.2em; font-weight: 600; color: #0d6efd; margin-bottom: 12px; }
+    .topico-list { margin-top: 16px; }
+    .topico-item { padding: 8px 0; border-bottom: 1px solid #e9ecef; display: flex; justify-content: space-between; align-items: center; }
+    .topico-item:last-child { border-bottom: none; }
+    .badge-excelente { background: #d1e7dd; color: #0f5132; padding: 4px 12px; border-radius: 20px; font-weight: 600; font-size: 0.85em; }
+    .badge-bom { background: #cfe2ff; color: #084298; padding: 4px 12px; border-radius: 20px; font-weight: 600; font-size: 0.85em; }
+    .badge-atencao { background: #f8d7da; color: #842029; padding: 4px 12px; border-radius: 20px; font-weight: 600; font-size: 0.85em; }
+    .destaque-box { background: #e7f3ff; border-left: 4px solid #0d6efd; padding: 20px; margin: 20px 0; border-radius: 8px; }
+    .alerta-box { background: #fff3cd; border-left: 4px solid #ffc107; padding: 20px; margin: 20px 0; border-radius: 8px; }
+    
+    @media (max-width: 768px) { 
+      .stats { grid-template-columns: 1fr 1fr; } 
+      .nav-tab { min-width: 100px; padding: 10px 16px; font-size: 0.9em; }
+      .diagnostico-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -49,14 +68,14 @@
         <div style="font-size: 0.85em; color: #6c757d;">Acumulada (1º ao 5º)</div>
       </div>
       <div class="stat-card">
-        <div style="font-size: 0.9em; color: #6c757d;">Melhor Disciplina</div>
-        <div style="font-size: 2em; font-weight: 700;">Inglês</div>
-        <div style="font-size: 0.85em; color: #6c757d;">Média: 9,8</div>
+        <div style="font-size: 0.9em; color: #6c757d;">Avaliação Diagnóstica</div>
+        <div style="font-size: 2em; font-weight: 700;">90%</div>
+        <div style="font-size: 0.85em; color: #6c757d;">Média SAS (Fev/2026)</div>
       </div>
       <div class="stat-card">
-        <div style="font-size: 0.9em; color: #6c757d;">Ponto de Atenção</div>
-        <div style="font-size: 2em; font-weight: 700;">Português</div>
-        <div style="font-size: 0.85em; color: #6c757d;">Queda em 2025</div>
+        <div style="font-size: 0.9em; color: #6c757d;">Melhor na Diagnóstica</div>
+        <div style="font-size: 2em; font-weight: 700;">Matemática</div>
+        <div style="font-size: 0.85em; color: #6c757d;">96% de acerto</div>
       </div>
       <div class="stat-card">
         <div style="font-size: 0.9em; color: #6c757d;">Próximo Evento</div>
@@ -65,15 +84,227 @@
       </div>
     </section>
 
+    <!-- Nova seção: Resultado da Diagnóstica -->
+    <section class="diagnostico-section">
+      <h2 style="font-size: 1.8em; margin-bottom: 8px;">🎯 Avaliação Diagnóstica SAS - Fevereiro 2026</h2>
+      <p style="font-size: 1.1em;">Resultado geral excelente! Média de 90% de acerto nas 3 disciplinas avaliadas.</p>
+      
+      <div class="diagnostico-grid">
+        <div class="diagnostico-materia">
+          <div class="materia-nome">📐 Matemática</div>
+          <div class="materia-nota" style="color: #198754;">96%</div>
+          <div style="font-size: 0.9em; color: #6c757d; margin-bottom: 8px;">23 de 24 questões corretas</div>
+          <div class="topico-list">
+            <div class="topico-item">
+              <span>Geometria Plana</span>
+              <span class="badge-excelente">100%</span>
+            </div>
+            <div class="topico-item">
+              <span>Comparação e ordenação</span>
+              <span class="badge-excelente">100%</span>
+            </div>
+            <div class="topico-item">
+              <span>Operações: multiplicação e divisão</span>
+              <span class="badge-excelente">100%</span>
+            </div>
+            <div class="topico-item">
+              <span>Leitura e escrita dos números</span>
+              <span class="badge-excelente">100%</span>
+            </div>
+            <div class="topico-item">
+              <span>Geometria Espacial</span>
+              <span class="badge-atencao">67%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="diagnostico-materia">
+          <div class="materia-nome">🇬🇧 Inglês</div>
+          <div class="materia-nota" style="color: #0d6efd;">75%</div>
+          <div style="font-size: 0.9em; color: #6c757d; margin-bottom: 8px;">3 de 4 questões corretas</div>
+          <div class="topico-list">
+            <div class="topico-item">
+              <span>Verbs (Verbos)</span>
+              <span class="badge-excelente">100%</span>
+            </div>
+            <div class="topico-item">
+              <span>Reading Skills</span>
+              <span class="badge-excelente">100%</span>
+            </div>
+            <div class="topico-item">
+              <span>Question forms</span>
+              <span class="badge-atencao">0%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="diagnostico-materia">
+          <div class="materia-nome">📝 Português</div>
+          <div class="materia-nota" style="color: #0d6efd;">92%</div>
+          <div style="font-size: 0.9em; color: #6c757d; margin-bottom: 8px;">22 de 24 questões corretas</div>
+          <div class="topico-list">
+            <div class="topico-item">
+              <span>Conceito, análise e compreensão</span>
+              <span class="badge-excelente">100%</span>
+            </div>
+            <div class="topico-item">
+              <span>Figuras de linguagem</span>
+              <span class="badge-excelente">100%</span>
+            </div>
+            <div class="topico-item">
+              <span>Advérbios</span>
+              <span class="badge-excelente">100%</span>
+            </div>
+            <div class="topico-item">
+              <span>Coesão e coerência</span>
+              <span class="badge-excelente">100%</span>
+            </div>
+            <div class="topico-item">
+              <span>Sintaxe</span>
+              <span class="badge-atencao">50%</span>
+            </div>
+            <div class="topico-item">
+              <span>Semântica</span>
+              <span class="badge-atencao">0%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Caixas de destaque -->
+    <div class="destaque-box">
+      <h3 style="color: #0d6efd; font-size: 1.3em; margin-bottom: 12px;">✨ Pontos Fortes Identificados</h3>
+      <ul style="margin-left: 20px; line-height: 2;">
+        <li><strong>Matemática:</strong> Excelente domínio de geometria plana, operações matemáticas e sistema numérico (todas com 100%)</li>
+        <li><strong>Português:</strong> Forte em interpretação, figuras de linguagem, advérbios e coesão textual</li>
+        <li><strong>Inglês:</strong> Ótimo desempenho em verbos e compreensão de leitura</li>
+      </ul>
+    </div>
+
+    <div class="alerta-box">
+      <h3 style="color: #997404; font-size: 1.3em; margin-bottom: 12px;">⚠️ Pontos que Precisam de Atenção</h3>
+      <ul style="margin-left: 20px; line-height: 2;">
+        <li><strong>Matemática:</strong> Geometria Espacial (67%) - trabalhar com figuras tridimensionais, volumes e áreas</li>
+        <li><strong>Português:</strong> Semântica (0%) - estudar significado das palavras, sinônimos, antônimos e sentido no contexto</li>
+        <li><strong>Português:</strong> Sintaxe (50%) - reforçar análise sintática, sujeito, predicado e complementos</li>
+        <li><strong>Inglês:</strong> Question forms (0%) - praticar formação de perguntas em inglês (What, Where, When, How, etc.)</li>
+      </ul>
+    </div>
+
     <nav class="nav-tabs">
-      <button class="nav-tab active" onclick="showTab('avaliacoes', this)">📝 Avaliações</button>
+      <button class="nav-tab active" onclick="showTab('diagnostico', this)">🎯 Diagnóstica 2026</button>
+      <button class="nav-tab" onclick="showTab('avaliacoes', this)">📝 Avaliações</button>
       <button class="nav-tab" onclick="showTab('notas', this)">📊 Notas</button>
       <button class="nav-tab" onclick="showTab('evolucao', this)">📈 Evolução</button>
       <button class="nav-tab" onclick="showTab('eventos', this)">📋 Eventos</button>
       <button class="nav-tab" onclick="showTab('trimestres', this)">📑 Trimestres</button>
     </nav>
 
-    <section id="avaliacoes" class="tab-content active">
+    <section id="diagnostico" class="tab-content active">
+      <div class="card">
+        <div class="card-title">📊 Análise Detalhada - Diagnóstica SAS</div>
+        
+        <h3 style="color: #198754; margin-top: 20px;">📐 Matemática - 96% (23/24)</h3>
+        <p style="margin: 12px 0;"><strong>Análise:</strong> Desempenho excepcional! Samuel mostra domínio sólido em praticamente todos os conceitos matemáticos básicos.</p>
+        
+        <div style="background: #d1e7dd; padding: 16px; border-radius: 8px; margin: 16px 0;">
+          <strong>✅ O que está excelente:</strong>
+          <ul style="margin-left: 20px; margin-top: 8px;">
+            <li>Geometria Plana (formas 2D, perímetro, área)</li>
+            <li>Sistema numérico (leitura e escrita)</li>
+            <li>Operações básicas (multiplicação e divisão)</li>
+            <li>Comparação e ordenação de números</li>
+          </ul>
+        </div>
+
+        <div style="background: #fff3cd; padding: 16px; border-radius: 8px; margin: 16px 0;">
+          <strong>⚠️ Precisa melhorar:</strong>
+          <ul style="margin-left: 20px; margin-top: 8px;">
+            <li><strong>Geometria Espacial (67%):</strong> Trabalhar com cubos, pirâmides, cilindros - visualização 3D</li>
+          </ul>
+          <p style="margin-top: 12px;"><strong>💡 Sugestão:</strong> Usar objetos concretos (caixas, latas) para visualizar melhor as formas espaciais. Desenhar as planificações ajuda muito!</p>
+        </div>
+
+        <hr style="margin: 30px 0;">
+
+        <h3 style="color: #0d6efd; margin-top: 20px;">🇬🇧 Inglês - 75% (3/4)</h3>
+        <p style="margin: 12px 0;"><strong>Análise:</strong> Bom desempenho geral, com compreensão forte de textos e verbos.</p>
+        
+        <div style="background: #d1e7dd; padding: 16px; border-radius: 8px; margin: 16px 0;">
+          <strong>✅ O que está excelente:</strong>
+          <ul style="margin-left: 20px; margin-top: 8px;">
+            <li>Verbos (conjugação e uso)</li>
+            <li>Compreensão de leitura (Reading Skills)</li>
+          </ul>
+        </div>
+
+        <div style="background: #fff3cd; padding: 16px; border-radius: 8px; margin: 16px 0;">
+          <strong>⚠️ Precisa melhorar:</strong>
+          <ul style="margin-left: 20px; margin-top: 8px;">
+            <li><strong>Question forms (0%):</strong> Formação de perguntas em inglês</li>
+          </ul>
+          <p style="margin-top: 12px;"><strong>💡 Sugestão:</strong> Praticar as "question words": What (O quê?), Where (Onde?), When (Quando?), Who (Quem?), Why (Por quê?), How (Como?). Fazer exercícios transformando frases afirmativas em perguntas.</p>
+          <p style="margin-top: 8px;"><strong>Exemplo:</strong> "You are happy" → "Are you happy?" / "He likes pizza" → "Does he like pizza?"</p>
+        </div>
+
+        <hr style="margin: 30px 0;">
+
+        <h3 style="color: #0d6efd; margin-top: 20px;">📝 Português - 92% (22/24)</h3>
+        <p style="margin: 12px 0;"><strong>Análise:</strong> Excelente desempenho! Samuel demonstra boa compreensão textual e domínio gramatical na maioria dos tópicos.</p>
+        
+        <div style="background: #d1e7dd; padding: 16px; border-radius: 8px; margin: 16px 0;">
+          <strong>✅ O que está excelente:</strong>
+          <ul style="margin-left: 20px; margin-top: 8px;">
+            <li>Interpretação de textos (conceito, análise, compreensão)</li>
+            <li>Figuras de linguagem (metáfora, comparação, etc.)</li>
+            <li>Advérbios (tempo, lugar, modo)</li>
+            <li>Coesão e coerência textual</li>
+            <li>Competência leitora</li>
+            <li>Ortografia, acentuação e pontuação</li>
+          </ul>
+        </div>
+
+        <div style="background: #fff3cd; padding: 16px; border-radius: 8px; margin: 16px 0;">
+          <strong>⚠️ Precisa melhorar:</strong>
+          <ul style="margin-left: 20px; margin-top: 8px;">
+            <li><strong>Semântica (0%):</strong> Significado das palavras no contexto</li>
+            <li><strong>Sintaxe (50%):</strong> Análise sintática das frases</li>
+          </ul>
+          
+          <p style="margin-top: 12px;"><strong>💡 Sugestões para Semântica:</strong></p>
+          <ul style="margin-left: 20px; margin-top: 8px;">
+            <li>Estudar sinônimos e antônimos</li>
+            <li>Entender como o contexto muda o sentido das palavras</li>
+            <li>Exemplo: "manga" pode ser fruta ou parte da camisa - o contexto define!</li>
+          </ul>
+
+          <p style="margin-top: 12px;"><strong>💡 Sugestões para Sintaxe:</strong></p>
+          <ul style="margin-left: 20px; margin-top: 8px;">
+            <li>Identificar sujeito e predicado nas frases</li>
+            <li>Reconhecer complementos (objeto direto, indireto)</li>
+            <li>Praticar com frases simples primeiro, depois aumentar a complexidade</li>
+          </ul>
+        </div>
+
+        <div style="background: #e7f3ff; border: 2px solid #0d6efd; padding: 20px; border-radius: 12px; margin-top: 30px;">
+          <h3 style="color: #0d6efd; margin-bottom: 12px;">📌 Resumo e Plano de Ação</h3>
+          <p style="margin-bottom: 12px;"><strong>Resultado Geral:</strong> Muito positivo! Média de 90% indica que Samuel está bem preparado para o 6º ano.</p>
+          
+          <p style="margin-bottom: 8px;"><strong>Focar nos próximos dias:</strong></p>
+          <ol style="margin-left: 20px; line-height: 2;">
+            <li><strong>Geometria Espacial (Matemática)</strong> - 15 minutos por dia com objetos concretos</li>
+            <li><strong>Question forms (Inglês)</strong> - 10 minutos por dia praticando perguntas</li>
+            <li><strong>Semântica (Português)</strong> - Ler textos identificando sinônimos e contextos</li>
+            <li><strong>Sintaxe (Português)</strong> - Analisar 2-3 frases por dia identificando partes</li>
+          </ol>
+
+          <p style="margin-top: 16px; font-weight: 600;">🎯 Com foco nesses pontos específicos, Samuel pode alcançar 95%+ nas próximas avaliações!</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="avaliacoes" class="tab-content">
       <div class="card">
         <div class="card-title">📝 Calendário de Avaliações — 1º Trimestre 2026</div>
         
@@ -87,11 +318,11 @@
           • Após as avaliações os alunos serão liberados
         </div>
 
-        <div class="avaliacao-card" style="border-color: #6c757d;">
-          <strong style="color: #6c757d; font-size: 1.1em;">🔍 Avaliação Diagnóstica SAS (sem pontuação)</strong>
-          <div style="margin-top: 8px; font-size: 0.85em; color: #6c757d;">Em parceria com o Sistema de Ensino Ari de Sá — objetivo: identificar dificuldades específicas nas 4 áreas do conhecimento</div>
+        <div class="avaliacao-card" style="border-color: #198754; background: #d1e7dd;">
+          <strong style="color: #198754; font-size: 1.1em;">✅ Avaliação Diagnóstica SAS (CONCLUÍDA - 90%)</strong>
+          <div style="margin-top: 8px; font-size: 0.85em; color: #0f5132;">Em parceria com o Sistema de Ensino Ari de Sá — objetivo: identificar dificuldades específicas nas 4 áreas do conhecimento</div>
           <div style="margin-top: 12px; font-size: 0.9em;">
-            <strong>Terça, 10/02 — Linguagens (1h30):</strong> Português (24 questões) + Inglês (4 questões)<br>
+            <strong>✅ Terça, 10/02 — Linguagens (1h30):</strong> Português (24 questões) + Inglês (4 questões) - <strong>CONCLUÍDO</strong><br>
             <strong>Quarta, 11/02 — Humanas:</strong> História (12 questões, 50 min) + Geografia (12 questões, 50 min)<br>
             <strong>Quinta, 12/02 — Natureza (50 min):</strong> Ciências (12 questões)<br>
             <strong>Sexta, 13/02 — Matemática (1h20):</strong> Matemática (24 questões)
