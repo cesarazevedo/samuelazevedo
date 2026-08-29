@@ -78,6 +78,11 @@
         <div style="font-size: 0.85em; color: #6c757d;">96% de acerto</div>
       </div>
       <div class="stat-card">
+        <div style="font-size: 0.9em; color: #6c757d;">Média 6º Ano (Parcial)</div>
+        <div style="font-size: 2em; font-weight: 700;">9,0</div>
+        <div style="font-size: 0.85em; color: #6c757d;">1º e 2º Trimestre 2026</div>
+      </div>
+      <div class="stat-card">
         <div style="font-size: 0.9em; color: #6c757d;">Próximo Evento</div>
         <div id="nextEventName" style="font-size: 1.3em; font-weight: 700;">Carregando...</div>
         <div id="nextEventCountdown" style="font-size: 0.9em; color: #0d6efd; font-weight: 600;">--</div>
@@ -393,6 +398,37 @@
 
     <section id="notas" class="tab-content">
       <div class="card">
+        <div class="card-title">📊 Boletim Parcial — 6º Ano (ENFC-6AV) — 2026</div>
+        <div style="overflow-x: auto;">
+          <table>
+            <thead>
+              <tr>
+                <th>Disciplina</th><th>Situação</th><th>1º Trimestre</th><th>2º Trimestre</th><th>Média Parcial</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Artes</td><td>Matriculado</td><td data-grade="9.4">9,4</td><td data-grade="9.4">9,4</td><td data-grade="9.4">9,4</td></tr>
+              <tr><td>Ciências</td><td>Matriculado</td><td data-grade="9.5">9,5</td><td data-grade="9.1">9,1</td><td data-grade="9.3">9,3</td></tr>
+              <tr><td>Educação Física</td><td>Matriculado</td><td data-grade="9.6">9,6</td><td data-grade="9.3">9,3</td><td data-grade="9.5">9,5</td></tr>
+              <tr><td>Filosofia</td><td>Matriculado</td><td data-grade="8.9">8,9</td><td data-grade="9.6">9,6</td><td data-grade="9.3">9,3</td></tr>
+              <tr><td>Geografia</td><td>Matriculado</td><td data-grade="9.2">9,2</td><td data-grade="8.5">8,5</td><td data-grade="8.9">8,9</td></tr>
+              <tr><td>História</td><td>Matriculado</td><td data-grade="9.4">9,4</td><td data-grade="9.1">9,1</td><td data-grade="9.3">9,3</td></tr>
+              <tr><td>Inglês</td><td>Matriculado</td><td data-grade="8.8">8,8</td><td data-grade="8.6">8,6</td><td data-grade="8.7">8,7</td></tr>
+              <tr><td>Matemática</td><td>Matriculado</td><td data-grade="9.0">9,0</td><td data-grade="8.1">8,1</td><td data-grade="8.6">8,6</td></tr>
+              <tr><td>Português</td><td>Matriculado</td><td data-grade="8.4">8,4</td><td data-grade="7.8">7,8</td><td data-grade="8.1">8,1</td></tr>
+            </tbody>
+            <tfoot>
+              <tr style="background: #e9ecef; font-weight: 700;">
+                <td colspan="4">Média Geral Parcial (6º Ano)</td>
+                <td data-grade="9.0">9,0</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        <div style="font-size: 0.85em; color: #6c757d; margin-top: 12px;">3º e 4º trimestres ainda não lançados. Resultado do 2º Trimestre entregue em 29/08/2026.</div>
+      </div>
+
+      <div class="card">
         <div class="card-title">📊 Histórico de Notas</div>
         <div style="overflow-x: auto;">
           <table id="historicoTable">
@@ -593,12 +629,12 @@
       new Chart(ctx, {
         type: 'line',
         data: {
-          labels: ['1º Ano', '2º Ano', '3º Ano', '4º Ano', '5º Ano'],
+          labels: ['1º Ano', '2º Ano', '3º Ano', '4º Ano', '5º Ano', '6º Ano (parcial)'],
           datasets: [
-            { label: 'Português', data: [9.2, 9.8, 9.5, 9.8, 8.4], borderColor: '#dc3545', tension: 0.3, borderWidth: 3 },
-            { label: 'Matemática', data: [9.7, 9.2, 9.4, 9.3, 9.4], borderColor: '#0d6efd', tension: 0.3, borderWidth: 3 },
-            { label: 'Inglês', data: [10, 9.9, 10, 9.1, 9.2], borderColor: '#198754', tension: 0.3, borderWidth: 3 },
-            { label: 'Média Geral', data: [9.5, 9.6, 9.7, 9.5, 9.3], borderColor: '#6610f2', tension: 0.3, borderWidth: 4, fill: true, backgroundColor: 'rgba(102, 16, 242, 0.1)' }
+            { label: 'Português', data: [9.2, 9.8, 9.5, 9.8, 8.4, 8.1], borderColor: '#dc3545', tension: 0.3, borderWidth: 3 },
+            { label: 'Matemática', data: [9.7, 9.2, 9.4, 9.3, 9.4, 8.6], borderColor: '#0d6efd', tension: 0.3, borderWidth: 3 },
+            { label: 'Inglês', data: [10, 9.9, 10, 9.1, 9.2, 8.7], borderColor: '#198754', tension: 0.3, borderWidth: 3 },
+            { label: 'Média Geral', data: [9.5, 9.6, 9.7, 9.5, 9.3, 9.0], borderColor: '#6610f2', tension: 0.3, borderWidth: 4, fill: true, backgroundColor: 'rgba(102, 16, 242, 0.1)' }
           ]
         },
         options: {
